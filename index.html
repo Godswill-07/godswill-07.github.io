@@ -1,206 +1,208 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Godswill Douglas | Data Analyst Portfolio</title>
     <style>
-        :root { --primary: #0078d4; --dark: #333; --light: #f4f4f4; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark); background: var(--light); margin: 0; padding: 0; }
-        .container { max-width: 1000px; margin: 20px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        body { background-color: #0a192f; color: #ccd6f6; font-family: 'Segoe UI', sans-serif; }
+        .accent-color { color: #FCDB56; }
+        .accent-border { border-color: #FCDB56; }
+        .glass-card { background: #112240; border-radius: 8px; transition: all 0.3s ease; }
+        .glass-card:hover { transform: translateY(-5px); }
+        .nav-link:hover { color: #FCDB56; }
+        .section-header::after { content: ""; display: block; width: 200px; height: 1px; background: #233554; margin-left: 20px; }
         
-        /* Fixed Profile Image Style */
-        .profile-img {
-            width: 150px; 
-            height: 150px; 
-            border-radius: 50%; 
-            object-fit: cover; 
-            border: 4px solid var(--primary); 
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-            flex-shrink: 0;
-            margin-right: 20px;
-        }
-
-        .header-container { display: flex; align-items: center; }
-        .header-text h1 { margin: 0; color: var(--primary); text-transform: uppercase; font-size: 1.8em; }
-        .contact-info { font-size: 0.9em; color: #666; margin-top: 5px; }
-        
-        .btn-resume { 
-            background: var(--primary); 
-            color: white !important; 
-            padding: 12px 20px; 
-            border-radius: 5px; 
-            text-decoration: none; 
-            font-weight: bold;
-            transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
-            display: inline-block;
-        }
-
-        .section-title { border-left: 5px solid var(--primary); padding-left: 15px; margin: 40px 0 20px; text-transform: uppercase; letter-spacing: 1px; font-size: 1.2em; }
-        
-        /* Grid for Skills */
-        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
-        .skill-category h4 { margin-bottom: 5px; color: var(--primary); }
-        
-        /* Project Cards */
-        .project { background: #fff; border: 1px solid #ddd; border-radius: 8px; margin-bottom: 30px; overflow: hidden; }
-        .project-content { padding: 20px; }
-        .badge { background: var(--primary); color: white; padding: 3px 10px; border-radius: 4px; font-size: 0.75em; margin-right: 5px; vertical-align: middle; }
-        iframe { width: 100%; height: 550px; border: none; background: #eee; }
-        
-        /* Links */
-        a { color: var(--primary); text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
-
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-
-        /* --- ADDED FINER UI ENHANCEMENTS HERE --- */
-        html { scroll-behavior: smooth; }
-
-        .project { 
-            transition: transform 0.3s ease, box-shadow 0.3s ease; 
-            border: none; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        .project:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 10px 20px rgba(0,0,0,0.12); 
-        }
-
-        .btn-resume {
-            box-shadow: 0 4px 6px rgba(0,120,212,0.2);
-        }
-
-        .btn-resume:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0,120,212,0.3);
-            background: #005a9e;
-        }
-
-        @media (max-width: 600px) {
-            .header-container { flex-direction: column; text-align: center; }
-            .profile-img { margin-right: 0; margin-bottom: 15px; }
-        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0a192f; }
+        ::-webkit-scrollbar-thumb { background: #233554; border-radius: 10px; }
     </style>
 </head>
-<body>
+<body class="px-6 md:px-16 lg:px-32 pb-20">
 
-<div class="container">
-    <header style="display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--primary); padding-bottom: 20px; margin-bottom: 30px; flex-wrap: wrap; gap: 20px;">
-        <div class="header-container">
-            <img src="profile.JPG" alt="Godswill Douglas" class="profile-img">
-            
-            <div class="header-text">
-                <h1>Godswill Ndukachukwu Douglas</h1>
-                <p style="margin: 5px 0;">
-                    <strong>Microsoft Certified: Power BI Data Analyst Associate</strong> 
-                    <a href="https://learn.microsoft.com/api/credentials/share/en-us/GodswillDouglas-7764/4815E74C545AF588?sharingId=94FF5E6A39EB51" target="_blank" style="font-size: 0.8em; margin-left: 10px; color: #28a745;">(Verify Credential ✅)</a>
-                </p>
-                <div class="contact-info">
-                    Nigeria | +234 701 932 4243 | godswilldouglas117@gmail.com <br>
-                    <a href="http://www.linkedin.com/in/godswill-douglas-055680221">LinkedIn</a> | <a href="https://github.com/Godswill-07">GitHub</a>
-                </div>
-            </div>
-        </div>
-        <div>
-            <a href="Godswill_Douglas_Resume.pdf" class="btn-resume" target="_blank">
-                Download Resume (PDF)
-            </a>
-        </div>
+    <header class="flex justify-between items-center py-6 sticky top-0 bg-[#0a192f]/90 backdrop-blur-md z-50">
+        <div class="text-2xl font-bold accent-color">G . <span class="text-[#ccd6f6]">D</span></div>
+        
+        <nav class="hidden md:flex gap-8 items-center text-xs uppercase tracking-widest font-mono">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Expertise</a>
+            <a href="#work" class="nav-link">Projects</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="Godswill_Douglas_Resume.pdf" class="border-2 accent-border accent-color px-5 py-2 rounded hover:bg-[#FCDB56]/10 transition-all font-bold">Resume</a>
+        </nav>
     </header>
 
-    <h2 class="section-title">Technical Expertise</h2>
-    <div class="skills-grid">
-        <div class="skill-category">
-            <h4>Visualization</h4>
-            <p>Power BI (DAX), Tableau, Excel, PowerPoint</p>
-        </div>
-        <div class="skill-category">
-            <h4>Data Science</h4>
-            <p>Python (Pandas, NumPy, Scikit-learn), SQL, R</p>
-        </div>
-        <div class="skill-category">
-            <h4>Engineering</h4>
-            <p>IoT Systems, AutoCAD, Electrical Power Systems</p>
-        </div>
-    </div>
+    <main>
+        <section class="min-h-[80vh] flex flex-col justify-center">
+            <p class="accent-color font-mono mb-4 tracking-widest">Hi, my name is</p>
+            <h1 class="text-4xl md:text-7xl font-bold text-[#ccd6f6] mb-4">Godswill N. Douglas.</h1>
+            <h2 class="text-3xl md:text-6xl font-bold text-[#8892b0] mb-8 leading-tight">I bridge the gap between industrial systems and data.</h2>
+            
+            <div class="max-w-2xl text-[#8892b0] text-lg mb-10">
+                <p>Nigeria | +234 701 932 4243 | godswilldouglas117@gmail.com</p>
+            </div>
 
-    <h2 class="section-title">Interactive Dashboards & Projects</h2>
+            <div class="flex gap-6 flex-wrap">
+                <a href="mailto:godswilldouglas117@gmail.com" class="border-2 accent-border accent-color px-8 py-4 rounded font-bold hover:-translate-y-1 transition-all shadow-[4px_4px_0px_0px_rgba(252,219,86,1)]">Get in Touch</a>
+                <a href="http://www.linkedin.com/in/godswill-douglas-055680221" class="accent-color flex items-center gap-2 font-mono hover:underline">LinkedIn</a>
+                <a href="https://github.com/Godswill-07" class="accent-color flex items-center gap-2 font-mono hover:underline">GitHub</a>
+            </div>
+        </section>
 
-    <div class="project">
-        <div class="project-content">
-            <h3>Hotel Revenue Analysis Dashboard</h3>
-            <span class="badge">Power BI</span> <span class="badge">Hospitality Analytics</span> <span class="badge">Revenue Optimization</span>
-            <p>Developed an automated dashboard to track occupancy rates and RevPAR. Identified a <strong>12% revenue growth opportunity</strong> through pricing optimization and reduced reporting time by 40%.</p>
-        </div>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMzU5OTlmNTEtYmRiMi00OGI2LTk3NTktOWUzYWUyOTY1MDdkIiwidCI6ImY2N2ZjZTU3LTNmZGEtNDkxOS04MDdmLTIxN2M4ZGQxMjY2OSJ9"></iframe>" allowFullScreen="true"></iframe>
-    </div>
+        <section id="about" class="py-24">
+            <h2 class="text-2xl font-bold text-[#ccd6f6] flex items-center mb-10 section-header">
+                <span class="accent-color font-mono text-xl mr-2">01.</span> About Me
+            </h2>
+            <div class="grid md:grid-cols-3 gap-12 items-start">
+                <div class="md:col-span-2 text-[#8892b0] space-y-6">
+                    <div class="glass-card p-6 border-l-4 accent-border">
+                        <p class="text-[#ccd6f6] font-bold mb-2">Microsoft Certified Power BI Data Analyst Associate</p>
+                        <p>Electrical and Electronics Engineering graduate (Top 10%). Expert in advanced data modeling, DAX, and Python-based predictive analytics.</p>
+                        <a href="https://learn.microsoft.com/api/credentials/share/en-us/GodswillDouglas-7764/4815E74C545AF588?sharingId=94FF5E6A39EB51" target="_blank" class="accent-color text-sm font-mono mt-3 inline-block hover:underline">Verify Credibility ▹</a>
+                    </div>
+                    
+                    <p>I am specialized in optimizing energy systems and industrial IoT performance, with a demonstrated ability to drive a <span class="accent-color font-bold">25% increase in operational efficiency</span> through interactive visual storytelling.</p>
+                    
+                    <p>I leverage high-level visualization tools to translate complex datasets into actionable insights, ensuring business growth and system reliability.</p>
+                    
+                    <ul class="grid grid-cols-2 gap-2 font-mono text-sm">
+                        <li class="flex items-center gap-2"><span class="accent-color">▹</span> Power BI (DAX)</li>
+                        <li class="flex items-center gap-2"><span class="accent-color">▹</span> Python (NumPy/Pandas)</li>
+                        <li class="flex items-center gap-2"><span class="accent-color">▹</span> SQL / MySQL</li>
+                        <li class="flex items-center gap-2"><span class="accent-color">▹</span> IoT Systems</li>
+                        <li class="flex items-center gap-2"><span class="accent-color">▹</span> Tableau</li>
+                        <li class="flex items-center gap-2"><span class="accent-color">▹</span> AutoCAD Engineering</li>
+                    </ul>
+                </div>
+                <div class="relative group max-w-[280px] mx-auto md:mx-0">
+                    <div class="absolute inset-0 border-2 accent-border rounded translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-all duration-300"></div>
+                    <div class="relative overflow-hidden rounded bg-[#112240]">
+                        <img src="profile.JPG" alt="Godswill Douglas" class="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500 border border-[#233554]">
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="project">
-        <div class="project-content">
-            <h3>HR Analytics Dashboard</h3>
-            <span class="badge">Power BI</span> <span class="badge">Workforce Planning</span>
-            <p>Analyzed workforce data for 300+ employees, identifying a 50% attrition rate and uncovering key retention drivers through drill-down analysis.</p>
-        </div>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiZjkzMDE0MDEtYTI5MS00Nzk0LWE1ZjAtMDYzMjY5Yzk5OWQ1IiwidCI6ImY2N2ZjZTU3LTNmZGEtNDkxOS04MDdmLTIxN2M4ZGQxMjY2OSJ9"></iframe>" allowFullScreen="true"></iframe>
-    </div>
+        <section id="skills" class="py-24">
+            <h2 class="text-2xl font-bold text-[#ccd6f6] flex items-center mb-10 section-header">Technical Expertise</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-sm">
+                <div class="glass-card p-8 border-b-2 border-transparent hover:border-[#FCDB56]">
+                    <h4 class="accent-color font-mono mb-4 text-lg">Visualization</h4>
+                    <p class="text-[#8892b0]">Power BI (DAX), Tableau, Excel, PowerPoint</p>
+                </div>
+                <div class="glass-card p-8 border-b-2 border-transparent hover:border-[#FCDB56]">
+                    <h4 class="accent-color font-mono mb-4 text-lg">Data Science</h4>
+                    <p class="text-[#8892b0]">Python (Pandas, NumPy, Scikit-learn), SQL, R</p>
+                </div>
+                <div class="glass-card p-8 border-b-2 border-transparent hover:border-[#FCDB56]">
+                    <h4 class="accent-color font-mono mb-4 text-lg">Engineering</h4>
+                    <p class="text-[#8892b0]">IoT Systems, AutoCAD, Electrical Power Systems</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="project">
-        <div class="project-content">
-            <h3>Banking Credit Risk Pipeline</h3>
-            <span class="badge">Python</span> <span class="badge">Power BI</span> <span class="badge">SQL</span>
-            <p>End-to-end data pipeline for 5,000+ customers. Used Python for EDA and Power BI to visualize risk patterns and loan trends.</p>
-        </div>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiZDVlYmZlZGEtYmRmYy00OTUyLWJiZTYtYmI2Yjk5MmNhNGMzIiwidCI6ImY2N2ZjZTU3LTNmZGEtNDkxOS04MDdmLTIxN2M4ZGQxMjY2OSJ9"></iframe>" allowFullScreen="true"></iframe>
-    </div>
+        <section id="work" class="py-24">
+            <h2 class="text-2xl font-bold text-[#ccd6f6] flex items-center mb-12 section-header">Interactive Dashboards & Projects</h2>
 
-    <div class="project">
-        <div class="project-content">
-            <h3>Chocolate Sales & Operations Dashboard</h3>
-            <span class="badge">Power BI</span> <span class="badge">Sales Intelligence</span> <span class="badge">Supply Chain</span>
-            <p>Analyzed revenue and logistics efficiency for a chocolate distributor. Focused on cost-to-revenue patterns and identified logistics inefficiencies in low box count shipments.</p>
-            <ul>
-                <li><strong>Profit Optimization:</strong> Analyzed profit margins to identify high-performing product lines.</li>
-                <li><strong>Operational Insight:</strong> Detected resource gaps in logistics, supporting a more efficient shipment strategy.</li>
-            </ul>
-        </div>
-        <iframe src="https://app.powerbi.com/view?r=eyJrIjoiNGFkMmZiOGUtY2IzYi00YzA5LWE5ZDUtNWNkMjVkY2ViY2NhIiwidCI6ImY2N2ZjZTU3LTNmZGEtNDkxOS04MDdmLTIxN2M4ZGQxMjY2OSJ9"></iframe>" allowFullScreen="true"></iframe>
-    </div>
+            <div class="grid lg:grid-cols-12 gap-6 items-center mb-32">
+                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#233554] bg-[#112240]">
+                    <iframe src="https://app.powerbi.com/view?r=eyJrIjoiMzU5OTlmNTEtYmRiMi00OGI2LTk3NTktOWUzYWUyOTY1MDdkIiwidCI6ImY2N2ZjZTU3LTNmZGEtNDkxOS04MDdmLTIxN2M4ZGQxMjY2OSJ9" class="w-full h-[450px]"></iframe>
+                </div>
+                <div class="lg:col-span-5 lg:-ml-12 z-10 lg:text-right">
+                    <p class="accent-color font-mono text-xs mb-2">Hospitality Analytics</p>
+                    <h3 class="text-2xl font-bold text-[#ccd6f6] mb-4">Hotel Revenue Analysis</h3>
+                    <div class="glass-card p-6 mb-4 text-[#8892b0] shadow-xl text-sm leading-relaxed">
+                        Developed an automated dashboard to track occupancy rates and RevPAR. Identified a 12% revenue growth opportunity through pricing optimization and reduced reporting time by 40%.
+                    </div>
+                    <div class="flex gap-3 flex-wrap lg:justify-end text-xs font-mono text-[#8892b0]">
+                        <span>Power BI</span> <span>DAX</span> <span>Revenue Optimization</span>
+                    </div>
+                </div>
+            </div>
 
-    <h2 class="section-title">Professional Experience</h2>
-    <div class="experience">
-        <h4>Freelance Data Analyst | Dosreal Hotel</h4>
-        <p><em>Aug 2024 – Present</em></p>
-        <ul>
-            <li>Identified 12% revenue growth opportunity via pricing optimization.</li>
-            <li>Automated cleaning processes, reducing reporting time by 40%.</li>
-        </ul>
+            <div class="grid lg:grid-cols-12 gap-6 items-center mb-32">
+                <div class="lg:col-span-5 z-10">
+                    <p class="accent-color font-mono text-xs mb-2">Workforce Planning</p>
+                    <h3 class="text-2xl font-bold text-[#ccd6f6] mb-4">HR Analytics Dashboard</h3>
+                    <div class="glass-card p-6 mb-4 text-[#8892b0] shadow-xl text-sm leading-relaxed">
+                        Analyzed workforce data for 300+ employees, identifying a 50% attrition rate and uncovering key retention drivers through drill-down analysis.
+                    </div>
+                    <div class="flex gap-3 flex-wrap text-xs font-mono text-[#8892b0]">
+                        <span>Power BI</span> <span>Workforce Analysis</span> <span>HR Metrics</span>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#233554] bg-[#112240]">
+                    <iframe src="https://app.powerbi.com/view?r=eyJrIjoiZjkzMDE0MDEtYTI5MS00Nzk0LWE1ZjAtMDYzMjY5Yzk5OWQ1IiwidCI6ImY2N2ZjZTU3LTNmZGEtNDkxOS04MDdmLTIxN2M4ZGQxMjY2OSJ9" class="w-full h-[450px]"></iframe>
+                </div>
+            </div>
 
-        <h4>Industrial Trainee | Saipem Contracting Limited</h4>
-        <p><em>April 2024 – September 2024</em></p>
-        <ul>
-            <li>Interpreted AutoCAD wiring diagrams for industrial power systems.</li>
-            <li>Assembled and tested Direct-On-Line (DOL) starter panels with integrated safety systems.</li>
-        </ul>
-    </div>
+            <div class="grid lg:grid-cols-12 gap-6 items-center mb-32">
+                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#233554] bg-[#112240]">
+                    <iframe src="https://app.powerbi.com/view?r=eyJrIjoiNGFkMmZiOGUtY2IzYi00YzA5LWE5ZDUtNWNkMjVkY2ViY2NhIiwidCI6ImY2N2ZjZTU3LTNmZGEtNDkxOS04MDdmLTIxN2M4ZGQxMjY2OSJ9" class="w-full h-[450px]"></iframe>
+                </div>
+                <div class="lg:col-span-5 lg:-ml-12 z-10 lg:text-right">
+                    <p class="accent-color font-mono text-xs mb-2">Supply Chain Intelligence</p>
+                    <h3 class="text-2xl font-bold text-[#ccd6f6] mb-4">Chocolate Sales & Operations</h3>
+                    <div class="glass-card p-6 mb-4 text-[#8892b0] shadow-xl text-sm leading-relaxed">
+                        <p class="mb-3">Analyzed revenue and logistics efficiency for a chocolate distributor. Focused on cost-to-revenue patterns and identified logistics inefficiencies in low box count shipments.</p>
+                        <ul class="space-y-1">
+                            <li><span class="accent-color">▹</span> Profit Optimization</li>
+                            <li><span class="accent-color">▹</span> Operational Insight</li>
+                        </ul>
+                    </div>
+                    <div class="flex gap-3 flex-wrap lg:justify-end text-xs font-mono text-[#8892b0]">
+                        <span>Power BI</span> <span>Logistics</span> <span>Sales Analytics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <h2 class="section-title">Publications & Research</h2>
-    
-    <div style="padding-left: 20px;">
-        <div style="margin-bottom: 25px;">
-            <p><strong>Douglas, G.N., et al. (2026).</strong> “An IoT-Based Non-Intrusive Temperature Monitoring System for Star-Delta Controlled Induction Motors.”</p>
-            <p><em>Published in: Engineering Headway Journal</em></p>
-            <a href="https://shorturl.at/u8wv7" target="_blank" class="badge" style="padding: 8px 15px; text-decoration: none;">View Publication</a>
-        </div>
+        <section id="experience" class="py-24">
+            <h2 class="text-2xl font-bold text-[#ccd6f6] flex items-center mb-10 section-header">Professional Experience</h2>
+            <div class="space-y-12 max-w-3xl">
+                <div class="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[2px] before:bg-[#233554]">
+                    <h4 class="text-xl font-bold text-[#ccd6f6]">Freelance Data Analyst | <span class="accent-color">Dosreal Hotel</span></h4>
+                    <p class="font-mono text-sm text-[#8892b0] mb-4">Aug 2024 – Present</p>
+                    <ul class="space-y-2 text-[#8892b0] text-sm">
+                        <li class="flex gap-2"><span class="accent-color">▹</span> Identified 12% revenue growth opportunity via pricing optimization.</li>
+                        <li class="flex gap-2"><span class="accent-color">▹</span> Automated cleaning processes, reducing reporting time by 40%.</li>
+                    </ul>
+                </div>
+                <div class="relative pl-8 before:content-[''] before:absolute before:left-0 before:top-0 before:bottom-0 before:w-[2px] before:bg-[#233554]">
+                    <h4 class="text-xl font-bold text-[#ccd6f6]">Industrial Trainee | <span class="accent-color">Saipem Contracting Limited</span></h4>
+                    <p class="font-mono text-sm text-[#8892b0] mb-4">April 2024 – September 2024</p>
+                    <ul class="space-y-2 text-[#8892b0] text-sm">
+                        <li class="flex gap-2"><span class="accent-color">▹</span> Interpreted AutoCAD wiring diagrams for industrial power systems.</li>
+                        <li class="flex gap-2"><span class="accent-color">▹</span> Assembled and tested Direct-On-Line (DOL) starter panels with integrated safety systems.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
 
-        <div style="margin-bottom: 25px;">
-            <p><strong>Douglas, G.N., et al. (2025).</strong> “IoT-Based Thermal Limit Monitoring and Protection of Induction Motor.”</p>
-            <p><em>Presented at: International Conference, Elizade University</em></p>
-            <a href="https://www.researchgate.net/profile/Oluwadare-Olakunle/publication/399987744_IoT-based_Thermal_Limit_Monitoring_and_Protection_of_Induction_Motor/links/697224992fd82c12a6f759d3/IoT-based-Thermal-Limit-Monitoring-and-Protection-of-Induction-Motor.pdf" target="_blank" class="badge" style="padding: 8px 15px; text-decoration: none;">Read Conference Paper</a>
-        </div>
-    </div>
+        <section id="publications" class="py-24">
+            <h2 class="text-2xl font-bold text-[#ccd6f6] flex items-center mb-10 section-header">Publications & Research</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-8 border-l-4 accent-border">
+                    <p class="text-[#ccd6f6] mb-4 text-sm leading-relaxed"><strong>Douglas, G.N., et al. (2026).</strong> “An IoT-Based Non-Intrusive Temperature Monitoring System for Star-Delta Controlled Induction Motors.”</p>
+                    <p class="font-mono text-xs mb-4 italic text-[#8892b0]">Published in: Engineering Headway Journal</p>
+                    <a href="https://shorturl.at/u8wv7" target="_blank" class="accent-color border border-[#FCDB56] px-4 py-2 rounded text-[10px] uppercase font-bold hover:bg-[#FCDB56]/10 transition-all inline-block">View Publication</a>
+                </div>
+                <div class="glass-card p-8 border-l-4 accent-border">
+                    <p class="text-[#ccd6f6] mb-4 text-sm leading-relaxed"><strong>Douglas, G.N., et al. (2025).</strong> “IoT-Based Thermal Limit Monitoring and Protection of Induction Motor.”</p>
+                    <p class="font-mono text-xs mb-4 italic text-[#8892b0]">Presented at: International Conference, Elizade University</p>
+                    <a href="https://www.researchgate.net/profile/Oluwadare-Olakunle/publication/399987744_IoT-based_Thermal_Limit_Monitoring_and_Protection_of_Induction_Motor/links/697224992fd82c12a6f759d3/IoT-based-Thermal-Limit-Monitoring-and-Protection-of-Induction-Motor.pdf" target="_blank" class="accent-color border border-[#FCDB56] px-4 py-2 rounded text-[10px] uppercase font-bold hover:bg-[#FCDB56]/10 transition-all inline-block">Read Conference Paper</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-20 font-mono text-[10px] text-[#495670] border-t border-[#233554]">
+        <p>Built by Godswill Ndukachukwu Douglas | 2026</p>
+        <p class="mt-2 tracking-widest uppercase">Business Intelligence Analyst | Power BI Developer</p>
+    </footer>
 
 </body>
 </html>
