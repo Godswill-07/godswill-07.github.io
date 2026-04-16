@@ -9,16 +9,15 @@
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: var(--dark); background: var(--light); margin: 0; padding: 0; }
         .container { max-width: 1000px; margin: 20px auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         
-        /* Updated Header with Flexbox for Resume Button */
-        header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            border-bottom: 3px solid var(--primary); 
-            padding-bottom: 20px; 
-            margin-bottom: 30px; 
-            flex-wrap: wrap;
-            gap: 20px;
+        /* Fixed Profile Image Style */
+        .profile-img {
+            width: 150px; 
+            height: 150px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 4px solid var(--primary); 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+            flex-shrink: 0;
         }
         
         .header-text h1 { margin: 0; color: var(--primary); text-transform: uppercase; font-size: 1.8em; }
