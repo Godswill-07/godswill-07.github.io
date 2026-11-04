@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
@@ -5,59 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <title>Godswill Douglas | BI Portfolio</title>
+    <title>Godswill Douglas | Data Analyst Portfolio</title>
     <style>
-        body { background-color: #020617; color: #94a3b8; font-family: 'Segoe UI', sans-serif; }
-        .accent-color { color: #10b981; }
-        .hero-text { color: #f8fafc; }
-        .glass-card { background: #0f172a; border-radius: 12px; transition: all 0.3s ease; border: 1px solid #1e293b; }
-        .glass-card:hover { transform: translateY(-5px); border-color: #10b981; }
-        .nav-link:hover { color: #10b981; }
-        .section-header::after { content: ""; display: block; width: 150px; height: 1px; background: #334155; margin-left: 20px; }
+        :root { --navy: #0a1128; --navy-2: #111c3a; --line: #22335e; --accent: #38bdf8; --accent-2: #818cf8; --text: #a9b8d6; --heading: #f1f5ff; }
+        body {
+            background-color: var(--navy); color: var(--text);
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            background-image:
+                radial-gradient(900px 500px at 85% -5%, rgba(56,189,248,0.14), transparent 60%),
+                radial-gradient(700px 500px at -5% 35%, rgba(129,140,248,0.10), transparent 60%);
+            background-attachment: fixed;
+        }
+        .accent-color { color: var(--accent); }
+        .hero-text { color: var(--heading); }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .glass-card { background: rgba(17,28,58,0.75); backdrop-filter: blur(6px); border-radius: 16px; transition: all 0.3s ease; border: 1px solid var(--line); }
+        .glass-card:hover { transform: translateY(-5px); border-color: var(--accent); box-shadow: 0 12px 30px -12px rgba(56,189,248,0.35); }
+        .nav-link { transition: color .2s ease; }
+        .nav-link:hover { color: var(--accent); }
+        .section-header::after { content: ""; display: block; flex: 1; max-width: 220px; height: 1px; background: linear-gradient(90deg, var(--line), transparent); margin-left: 20px; }
+        .tag { background: rgba(56,189,248,0.10); border: 1px solid rgba(56,189,248,0.25); color: #bfe9ff; }
+        .sub-header { letter-spacing: .02em; }
         ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #020617; }
-        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
-        ::-webkit-scrollbar-thumb:hover { background: #10b981; }
+        ::-webkit-scrollbar-track { background: var(--navy); }
+        ::-webkit-scrollbar-thumb { background: var(--line); border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
     </style>
 </head>
 <body class="px-6 md:px-16 lg:px-32 pb-20">
-
-    <header class="flex justify-between items-center py-6 sticky top-0 bg-[#020617]/90 backdrop-blur-md z-50">
+ 
+    <header class="flex justify-between items-center py-6 sticky top-0 bg-[#0a1128]/80 backdrop-blur-md z-50 border-b border-[#22335e]/60">
         <div class="text-2xl font-bold accent-color">G . <span class="hero-text">D</span></div>
         <nav class="hidden md:flex gap-8 items-center text-xs uppercase tracking-widest font-mono">
             <a href="#about" class="nav-link">01. About</a>
-            <a href="#skills" class="nav-link">02. Challenges</a>
-            <a href="#work" class="nav-link">03. Dashboards</a>
-            <a href="#experience" class="nav-link">04. Experience</a>
-            <a href="GODSWILL_DOUGLAS_DATA_ANALYST_RESUME.pdf" class="border border-[#10b981] accent-color px-5 py-2 rounded hover:bg-[#10b981]/10 transition-all font-bold">Resume</a>
+            <a href="#skills" class="nav-link">02. Expertise</a>
+            <a href="#work" class="nav-link">03. Power BI</a>
+            <a href="#sql" class="nav-link">04. SQL</a>
+            <a href="#experience" class="nav-link">05. Experience</a>
+            <a href="GODSWILL_DOUGLAS_DATA_ANALYST_RESUME.pdf" class="border border-[#38bdf8] accent-color px-5 py-2 rounded hover:bg-[#38bdf8]/10 transition-all font-bold">Resume</a>
         </nav>
     </header>
-
+ 
     <main>
         <section class="min-h-[80vh] flex flex-col justify-center">
             <p class="accent-color font-mono mb-4 tracking-widest uppercase">Microsoft Certified Professional</p>
             <h1 class="text-4xl md:text-7xl font-bold hero-text mb-4">Godswill Douglas.</h1>
-            <h2 class="text-3xl md:text-6xl font-bold text-[#64748b] mb-8 leading-tight">Turning complex data into <span class="hero-text">automated intelligence.</span></h2>
+            <h2 class="text-3xl md:text-6xl font-bold text-[#7b8db3] mb-8 leading-tight">Turning complex data into <span class="gradient-text">automated intelligence.</span></h2>
             <div class="flex gap-6 flex-wrap">
-                <a href="mailto:godswilldouglas117@gmail.com" class="border border-[#10b981] accent-color px-8 py-4 rounded font-bold hover:bg-[#10b981]/10 transition-all shadow-[4px_4px_0px_0px_rgba(16,185,129,1)]">Get in Touch</a>
+                <a href="mailto:godswilldouglas117@gmail.com" class="border border-[#38bdf8] accent-color px-8 py-4 rounded font-bold hover:bg-[#38bdf8]/10 transition-all shadow-[4px_4px_0px_0px_rgba(56,189,248,1)]">Get in Touch</a>
                 <a href="http://www.linkedin.com/in/godswill-douglas-055680221" target="_blank" class="accent-color flex items-center gap-2 font-mono hover:underline">LinkedIn</a>
             </div>
         </section>
-
+ 
         <section id="about" class="py-24">
             <h2 class="text-2xl font-bold hero-text flex items-center mb-10 section-header">
                 <span class="accent-color font-mono text-xl mr-2">01.</span> About Me
             </h2>
             <div class="grid md:grid-cols-3 gap-12 items-start">
-                <div class="md:col-span-2 text-[#94a3b8] space-y-6">
+                <div class="md:col-span-2 text-[#a9b8d6] space-y-6">
                     <p class="text-lg">
                         Most businesses aren't suffering from a lack of data—they are suffering from a <span class="hero-text font-bold">lack of clarity.</span>
                     </p>
                     <p>
                         With a background in <span class="accent-color">Electrical and Electronics Engineering</span> and a focus on Predictive Analytics, I build the technical architecture that allows stakeholders to stop guessing and start growing.
                     </p>
-                    <div class="glass-card p-6 border-l-4 border-[#10b981]">
+                    <div class="glass-card p-6 border-l-4 border-[#38bdf8]">
                         <p class="hero-text font-bold mb-2 uppercase tracking-tight">The Value I Deliver</p>
                         <p class="text-sm">I specialize in transforming fragmented data ecosystems into streamlined intelligence—proven to drive a <span class="accent-color font-bold">25% increase in operational efficiency.</span></p>
                         <a href="https://learn.microsoft.com/api/credentials/share/en-us/GodswillDouglas-7764/4815E74C545AF588?sharingId=94FF5E6A39EB51" target="_blank" class="accent-color text-xs font-mono mt-3 inline-block hover:underline italic">Verify Microsoft Certification ▹</a>
@@ -82,14 +98,14 @@
                     </ul>
                 </div>
                 <div class="relative group max-w-[280px] mx-auto md:mx-0">
-                    <div class="absolute inset-0 border-2 border-[#10b981] rounded translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-all duration-300"></div>
-                    <div class="relative overflow-hidden rounded bg-[#0f172a]">
+                    <div class="absolute inset-0 border-2 border-[#38bdf8] rounded translate-x-4 translate-y-4 group-hover:translate-x-2 group-hover:translate-y-2 transition-all duration-300"></div>
+                    <div class="relative overflow-hidden rounded bg-[#111c3a]">
                         <img src="Mypic.png" alt="Godswill Douglas" class="w-full h-auto object-cover transition-all duration-500">
                     </div>
                 </div>
             </div>
         </section>
-
+ 
         <section id="skills" class="py-24">
             <h2 class="text-2xl font-bold hero-text flex items-center mb-10 section-header">
                 <span class="accent-color font-mono text-xl mr-2">02.</span> Technical Expertise
@@ -112,18 +128,18 @@
                 </div>
             </div>
         </section>
-
+ 
         <section id="work" class="py-24">
             <h2 class="text-2xl font-bold hero-text flex items-center mb-12 section-header">
-                <span class="accent-color font-mono text-xl mr-2">03.</span> Interactive Dashboards
+                <span class="accent-color font-mono text-xl mr-2">03.</span> Power BI Projects
             </h2>
-
+ 
             <!-- NEW PROJECT (FIRST): Rivers State HIV Care Cascade -->
             <div class="grid lg:grid-cols-12 gap-6 items-center mb-32">
                 <div class="lg:col-span-5 z-10">
                     <p class="accent-color font-mono text-xs mb-2">Public Health Analytics</p>
                     <h3 class="text-2xl font-bold hero-text mb-4">Rivers State HIV Care Cascade &amp; Treatment Outcomes Dashboard</h3>
-                    <div class="glass-card p-6 mb-4 text-[#94a3b8] shadow-xl text-sm leading-relaxed">
+                    <div class="glass-card p-6 mb-4 text-[#a9b8d6] shadow-xl text-sm leading-relaxed">
                         <ul class="space-y-3">
                             <li><span class="accent-color mr-1">▹</span> Built a dashboard tracking the <span class="hero-text font-semibold">HIV care cascade</span> (tested, tested positive, treatment start, viral suppression) for Rivers State, Nigeria, using 2016–2025 PEPFAR MER data (3,648 records, 8.8M+ people tested).</li>
                             <li><span class="accent-color mr-1">▹</span> Cleaned the data and caught a real error: age bands such as "10-14" that Excel had auto-converted into calendar dates, which I <span class="hero-text font-semibold">reconstructed from the corrupted values</span>; filtered age visuals to non-overlapping age bands to avoid double-counting.</li>
@@ -131,22 +147,22 @@
                         </ul>
                     </div>
                     <div class="flex gap-3 flex-wrap text-[10px] font-mono mb-6">
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">POWER BI</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">PEPFAR MER DATA</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">DATA CLEANING</span>
+                        <span class="tag px-2 py-1 rounded-full">POWER BI</span>
+                        <span class="tag px-2 py-1 rounded-full">PEPFAR MER DATA</span>
+                        <span class="tag px-2 py-1 rounded-full">DATA CLEANING</span>
                     </div>
                 </div>
-                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#1e293b]">
+                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#22335e]">
                     <iframe title="Rivers_State_HIV_Care_Cascade_Analysis" src="https://app.powerbi.com/view?r=eyJrIjoiN2VkNGZjOGUtN2Q5Ni00ZTNkLTlhZTgtMzdhZGY4NDI5YjUzIiwidCI6ImVmNDcyYTAzLWQ0ZmQtNDBiMi1hOTBjLTUxMGU3NDg1ZDlmNCJ9" class="w-full h-[450px]" frameborder="0" allowFullScreen="true"></iframe>
                 </div>
             </div>
-
+ 
             <!-- PROJECT 1: Spella Hub MID (NEW - FIRST PROJECT) -->
             <div class="grid lg:grid-cols-12 gap-6 items-center mb-32">
                 <div class="lg:col-span-5 z-10">
                     <p class="accent-color font-mono text-xs mb-2">EdTech & Automated BI Pipeline | May 2026 – July 2026</p>
                     <h3 class="text-2xl font-bold hero-text mb-4">Spella Hub Master Intelligence Dashboard (MID)</h3>
-                    <div class="glass-card p-6 mb-4 text-[#94a3b8] shadow-xl text-sm leading-relaxed">
+                    <div class="glass-card p-6 mb-4 text-[#a9b8d6] shadow-xl text-sm leading-relaxed">
                         <ul class="space-y-3">
                             <li><span class="accent-color mr-1">▹</span> Designed and built an <span class="hero-text font-semibold">end-to-end automated BI pipeline</span> (Google Forms → Apps Script → Supabase/PostgreSQL → Power BI) to eliminate manual record-keeping for student registration, attendance, and payment tracking.</li>
                             <li><span class="accent-color mr-1">▹</span> Architected a <span class="hero-text font-semibold">normalized 5-table Supabase schema</span> with custom ID validation, Row-Level Security policies, and auto-updating triggers, and built a Google Apps Script REST API integration to automate data ingestion end-to-end.</li>
@@ -154,24 +170,24 @@
                         </ul>
                     </div>
                     <div class="flex gap-3 flex-wrap text-[10px] font-mono mb-6">
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">POWER BI</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">POSTGRESQL</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">SUPABASE</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">GOOGLE APPS SCRIPT</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">AUTOMATION</span>
+                        <span class="tag px-2 py-1 rounded-full">POWER BI</span>
+                        <span class="tag px-2 py-1 rounded-full">POSTGRESQL</span>
+                        <span class="tag px-2 py-1 rounded-full">SUPABASE</span>
+                        <span class="tag px-2 py-1 rounded-full">GOOGLE APPS SCRIPT</span>
+                        <span class="tag px-2 py-1 rounded-full">AUTOMATION</span>
                     </div>
                 </div>
-                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#1e293b]">
+                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#22335e]">
                     <img src="myupdated_dashboard.png" alt="Spella Hub Master Intelligence Dashboard - Executive Command Center" class="w-full h-auto object-cover">
                 </div>
             </div>
-
+ 
             <!-- PROJECT 2: NASA -->
             <div class="grid lg:grid-cols-12 gap-6 items-center mb-32">
                 <div class="lg:col-span-5 z-10">
                     <p class="accent-color font-mono text-xs mb-2">Aerospace & Predictive ML | April 2026</p>
                     <h3 class="text-2xl font-bold hero-text mb-4">Predictive Health Monitoring (NASA C-MAPSS)</h3>
-                    <div class="glass-card p-6 mb-4 text-[#94a3b8] shadow-xl text-sm leading-relaxed">
+                    <div class="glass-card p-6 mb-4 text-[#a9b8d6] shadow-xl text-sm leading-relaxed">
                         <ul class="space-y-3">
                             <li><span class="accent-color mr-1">▹</span> Processed 20,000+ rows of telemetry using <span class="hero-text font-semibold">SQL Window Functions</span> to engineer RUL targets and filter sensor volatility.</li>
                             <li><span class="accent-color mr-1">▹</span> Developed a <span class="hero-text font-semibold">Random Forest Regressor</span> in Python (R^2: 0.95, MAE: 11.88 cycles) to model non-linear degradation.</li>
@@ -180,25 +196,25 @@
                         </ul>
                     </div>
                     <div class="flex gap-3 flex-wrap text-[10px] font-mono mb-6">
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">PYTHON</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">SQL</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">POWER BI</span>
+                        <span class="tag px-2 py-1 rounded-full">PYTHON</span>
+                        <span class="tag px-2 py-1 rounded-full">SQL</span>
+                        <span class="tag px-2 py-1 rounded-full">POWER BI</span>
                     </div>
-                    <a href="https://medium.com/@godswilldouglas117/case-study-predictive-health-monitoring-for-jet-engines-de011deec0b0" target="_blank" class="border border-[#10b981] accent-color px-6 py-2 rounded text-xs font-bold hover:bg-[#10b981]/10 transition-all inline-flex items-center gap-2">
+                    <a href="https://medium.com/@godswilldouglas117/case-study-predictive-health-monitoring-for-jet-engines-de011deec0b0" target="_blank" class="border border-[#38bdf8] accent-color px-6 py-2 rounded text-xs font-bold hover:bg-[#38bdf8]/10 transition-all inline-flex items-center gap-2">
                         View Case Study <span class="material-symbols-outlined text-sm">open_in_new</span>
                     </a>
                 </div>
-                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#1e293b]">
+                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#22335e]">
                     <iframe title="Predictive_Health_Monitor_Jet_Engines" src="https://app.powerbi.com/view?r=eyJrIjoiYzE0M2MyN2EtODIwNS00NDExLWIzNDEtZTgxZDY3YTc3NWRlIiwidCI6ImVmNDcyYTAzLWQ0ZmQtNDBiMi1hOTBjLTUxMGU3NDg1ZDlmNCJ9" class="w-full h-[450px]" frameborder="0" allowFullScreen="true"></iframe>
                 </div>
             </div>
-
+ 
             <!-- PROJECT 3: Superstore -->
             <div class="grid lg:grid-cols-12 gap-6 items-center mb-32">
                 <div class="lg:col-span-5 z-10">
                     <p class="accent-color font-mono text-xs mb-2">Retail & Sales Analytics | May 14, 2026</p>
                     <h3 class="text-2xl font-bold hero-text mb-4">Superstore Analytics Dashboard</h3>
-                    <div class="glass-card p-6 mb-4 text-[#94a3b8] shadow-xl text-sm leading-relaxed">
+                    <div class="glass-card p-6 mb-4 text-[#a9b8d6] shadow-xl text-sm leading-relaxed">
                         <ul class="space-y-3">
                             <li><span class="accent-color mr-1">▹</span> Cleaned and transformed raw Superstore sales data using <span class="hero-text font-semibold">Power Query</span>, removing nulls, correcting data types, and engineering conditional columns to build a reliable analytical foundation.</li>
                             <li><span class="accent-color mr-1">▹</span> Built advanced <span class="hero-text font-semibold">DAX measures</span> — including Total Sales, Profit Margin, and YOY Growth — to surface critical KPIs across product categories, customer segments, and regions.</li>
@@ -207,74 +223,110 @@
                         </ul>
                     </div>
                     <div class="flex gap-3 flex-wrap text-[10px] font-mono mb-6">
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">POWER BI</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">DAX</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">POWER QUERY</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">DATA MODELLING</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">FORECASTING</span>
+                        <span class="tag px-2 py-1 rounded-full">POWER BI</span>
+                        <span class="tag px-2 py-1 rounded-full">DAX</span>
+                        <span class="tag px-2 py-1 rounded-full">POWER QUERY</span>
+                        <span class="tag px-2 py-1 rounded-full">DATA MODELLING</span>
+                        <span class="tag px-2 py-1 rounded-full">FORECASTING</span>
                     </div>
                     <a href="https://github.com/Godswill-07/superstore-analytics-powerbi" target="_blank" class="accent-color text-xs font-bold hover:underline inline-flex items-center gap-2">
                         View Case Study <iconify-icon icon="simple-icons:github"></iconify-icon>
                     </a>
                 </div>
-                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#1e293b]">
+                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#22335e]">
                     <iframe title="Superstore Analytics Dashboard" src="https://app.powerbi.com/view?r=eyJrIjoiYmZlYzY2ZGMtODY4MC00OGRiLThkZWUtYWI2ZmRmNzQ0YjI3IiwidCI6ImVmNDcyYTAzLWQ0ZmQtNDBiMi1hOTBjLTUxMGU3NDg1ZDlmNCJ9" class="w-full h-[450px]" frameborder="0" allowFullScreen="true"></iframe>
                 </div>
             </div>
-
+ 
             <!-- PROJECT 4: HR -->
             <div class="grid lg:grid-cols-12 gap-6 items-center mb-32">
-                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#1e293b] lg:order-first order-last">
+                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#22335e] lg:order-first order-last">
                     <iframe title="HR REPORT" src="https://app.powerbi.com/view?r=eyJrIjoiMDYzOWYwMzQtZGFjMS00MjRiLWE2MDQtYWY5MTQzZmJhMTlmIiwidCI6ImVmNDcyYTAzLWQ0ZmQtNDBiMi1hOTBjLTUxMGU3NDg1ZDlmNCJ9" class="w-full h-[450px]"></iframe>
                 </div>
                 <div class="lg:col-span-5 z-10 lg:pl-10">
                     <p class="accent-color font-mono text-xs mb-2">Workforce Planning</p>
                     <h3 class="text-2xl font-bold hero-text mb-4">HR Analytics Dashboard</h3>
-                    <div class="glass-card p-6 mb-4 text-[#94a3b8] shadow-xl text-sm leading-relaxed">
+                    <div class="glass-card p-6 mb-4 text-[#a9b8d6] shadow-xl text-sm leading-relaxed">
                         Analyzed workforce data for 300+ employees, identifying a 50% attrition rate and uncovering key retention drivers through drill-down analysis and trend forecasting.
                     </div>
                     <div class="flex gap-3 flex-wrap text-[10px] font-mono mb-6">
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">WORKFORCE METRICS</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">ETL</span>
+                        <span class="tag px-2 py-1 rounded-full">WORKFORCE METRICS</span>
+                        <span class="tag px-2 py-1 rounded-full">ETL</span>
                     </div>
                     <a href="https://medium.com/@godswilldouglas117/title-beyond-the-spreadsheet-how-i-used-power-bi-to-uncover-a-50-attrition-crisis-ca6d26c2de48" target="_blank" class="accent-color text-xs font-bold hover:underline inline-flex items-center gap-2">
                         View Case Study <span class="material-symbols-outlined text-sm">open_in_new</span>
                     </a>
                 </div>
             </div>
-
+ 
             <!-- PROJECT 5: Banking -->
             <div class="grid lg:grid-cols-12 gap-6 items-center mb-32">
                 <div class="lg:col-span-5 z-10">
                     <p class="accent-color font-mono text-xs mb-2">Finance Pipeline</p>
                     <h3 class="text-2xl font-bold hero-text mb-4">Banking Credit Risk Pipeline</h3>
-                    <div class="glass-card p-6 mb-4 text-[#94a3b8] shadow-xl text-sm leading-relaxed">
+                    <div class="glass-card p-6 mb-4 text-[#a9b8d6] shadow-xl text-sm leading-relaxed">
                         End-to-end data pipeline for 5,000+ customers. Used Python for exploratory data analysis (EDA) and SQL for data architecture to visualize risk patterns.
                     </div>
                     <div class="flex gap-3 flex-wrap text-[10px] font-mono mb-6">
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">RISK MODELING</span>
-                        <span class="bg-[#10b981]/10 px-2 py-1 rounded">PYTHON</span>
+                        <span class="tag px-2 py-1 rounded-full">RISK MODELING</span>
+                        <span class="tag px-2 py-1 rounded-full">PYTHON</span>
                     </div>
                     <a href="https://github.com/Godswill-07/Banking-Project#" target="_blank" class="accent-color text-xs font-bold hover:underline inline-flex items-center gap-2">
                         View Source Code <iconify-icon icon="simple-icons:github"></iconify-icon>
                     </a>
                 </div>
-                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#1e293b]">
+                <div class="lg:col-span-7 rounded overflow-hidden shadow-2xl border border-[#22335e]">
                     <iframe title="Banking Dashboard" src="https://app.powerbi.com/view?r=eyJrIjoiZDcwYzY2ODItYTE1NC00MjkwLWJjNTctMDU2N2M1NjgwYzk4IiwidCI6ImVmNDcyYTAzLWQ0ZmQtNDBiMi1hOTBjLTUxMGU3NDg1ZDlmNCJ9" class="w-full h-[450px]"></iframe>
                 </div>
             </div>
-
+ 
         </section>
-
+ 
+        <section id="sql" class="py-24">
+            <h2 class="text-2xl font-bold hero-text flex items-center mb-12 section-header">
+                <span class="accent-color font-mono text-xl mr-2">04.</span> SQL Projects
+            </h2>
+ 
+            <!-- SQL PROJECT: Fintech Transaction Analytics -->
+            <div class="grid lg:grid-cols-12 gap-6 items-center mb-8">
+                <div class="lg:col-span-5 z-10">
+                    <p class="accent-color font-mono text-xs mb-2">Fintech &amp; Payments Analytics | SQL Server</p>
+                    <h3 class="text-2xl font-bold hero-text mb-4">Fintech Transaction Analytics (SQL Server)</h3>
+                    <div class="glass-card p-6 mb-4 text-[#a9b8d6] shadow-xl text-sm leading-relaxed">
+                        Analysed 500,000 transactions on a synthetic digital wallet modelled on Nigerian fintechs. Found a switch outage, a bot-like transfer burst and a USSD reliability problem, using window functions, cohort analysis and index tuning.
+                    </div>
+                    <div class="flex gap-3 flex-wrap text-[10px] font-mono mb-6">
+                        <span class="tag px-2 py-1 rounded-full">T-SQL</span>
+                        <span class="tag px-2 py-1 rounded-full">SQL SERVER</span>
+                        <span class="tag px-2 py-1 rounded-full">WINDOW FUNCTIONS</span>
+                        <span class="tag px-2 py-1 rounded-full">FRAUD DETECTION</span>
+                        <span class="tag px-2 py-1 rounded-full">PERFORMANCE TUNING</span>
+                    </div>
+                    <div class="flex gap-4 flex-wrap items-center">
+                        <a href="https://github.com/Godswill-07/fintech-transaction-analytics-sql" target="_blank" rel="noopener" class="border border-[#38bdf8] accent-color px-6 py-2 rounded text-xs font-bold hover:bg-[#38bdf8]/10 transition-all inline-flex items-center gap-2">
+                            View on GitHub <iconify-icon icon="simple-icons:github"></iconify-icon>
+                        </a>
+                        <a href="https://github.com/Godswill-07/fintech-transaction-analytics-sql#findings" target="_blank" rel="noopener" class="accent-color text-xs font-bold hover:underline inline-flex items-center gap-2">
+                            Read the findings <span class="material-symbols-outlined text-sm">open_in_new</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-7 rounded-2xl overflow-hidden shadow-2xl border border-[#22335e] bg-[#111c3a] p-4">
+                    <p class="font-mono text-[10px] uppercase tracking-widest text-[#7b8db3] mb-3">Entity relationship diagram</p>
+                    <img src="https://raw.githubusercontent.com/Godswill-07/fintech-transaction-analytics-sql/main/imageserd.png" alt="Entity relationship diagram for the Fintech Transaction Analytics database: customers, merchants and transactions" class="w-full h-auto object-contain rounded bg-white/95" loading="lazy">
+                </div>
+            </div>
+        </section>
+ 
         <section id="experience" class="py-24">
             <h2 class="text-2xl font-bold hero-text flex items-center mb-10 section-header">
-                <span class="accent-color font-mono text-xl mr-2">04.</span> Professional Experience
+                <span class="accent-color font-mono text-xl mr-2">05.</span> Professional Experience
             </h2>
             <div class="space-y-12 max-w-3xl">
                 <!-- NEW EXPERIENCE: Spella Tech hub -->
-                <div class="relative pl-8 border-l-2 border-[#1e293b]">
+                <div class="relative pl-8 border-l-2 border-[#22335e]">
                     <h4 class="text-xl font-bold hero-text">Data Science Instructor & Analyst | <span class="accent-color">Spella Hub</span></h4>
-                    <p class="font-mono text-sm mb-1 text-[#64748b]">Abakaliki, Ebonyi State, Nigeria</p>
+                    <p class="font-mono text-sm mb-1 text-[#7b8db3]">Abakaliki, Ebonyi State, Nigeria</p>
                     <p class="font-mono text-sm mb-4 italic">May 2026 – Present</p>
                     <ul class="space-y-2 text-sm">
                         <li><span class="accent-color mr-2">▹</span> Deliver structured instruction in Data Science, Data Analysis, and Data Visualization across in-person and virtual learning environments, supporting a consistent weekly schedule of 5 teaching and development sessions.</li>
@@ -284,9 +336,9 @@
                         <li><span class="accent-color mr-2">▹</span> Lead project development sessions focused on applied data science, guiding students and internal teams through hands-on technical projects.</li>
                     </ul>
                 </div>
-
+ 
                 <!-- Dosreal Hotel -->
-                <div class="relative pl-8 border-l-2 border-[#1e293b]">
+                <div class="relative pl-8 border-l-2 border-[#22335e]">
                     <h4 class="text-xl font-bold hero-text">Freelance Data Analyst | <span class="accent-color">Dosreal Hotel</span></h4>
                     <p class="font-mono text-sm mb-4 italic">Aug 2024 – Present</p>
                     <ul class="space-y-2 text-sm">
@@ -294,9 +346,9 @@
                         <li><span class="accent-color mr-2">▹</span> Automated reporting processes, reducing latency and manual effort by 40%.</li>
                     </ul>
                 </div>
-
+ 
                 <!-- Saipem Contracting -->
-                <div class="relative pl-8 border-l-2 border-[#1e293b]">
+                <div class="relative pl-8 border-l-2 border-[#22335e]">
                     <h4 class="text-xl font-bold hero-text">Industrial Trainee | <span class="accent-color">Saipem Contracting Limited</span></h4>
                     <p class="font-mono text-sm mb-4 italic">April 2024 – September 2024</p>
                     <ul class="space-y-2 text-sm">
@@ -306,25 +358,25 @@
                 </div>
             </div>
         </section>
-
+ 
         <section id="publications" class="py-24">
             <h2 class="text-2xl font-bold hero-text flex items-center mb-10 section-header">
-                <span class="accent-color font-mono text-xl mr-2">05.</span> Research
+                <span class="accent-color font-mono text-xl mr-2">06.</span> Research
             </h2>
             <div class="grid md:grid-cols-2 gap-6">
-                <div class="glass-card p-8 border-l-4 border-[#10b981]">
+                <div class="glass-card p-8 border-l-4 border-[#38bdf8]">
                     <p class="hero-text mb-4 text-sm font-bold uppercase">IoT-Based Thermal Monitoring System</p>
                     <p class="text-xs mb-4 italic tracking-wide">Published: Engineering Headway Journal (2026)</p>
-                    <a href="https://shorturl.at/u8wv7" target="_blank" class="accent-color border border-[#10b981] px-4 py-2 rounded text-[10px] uppercase font-bold hover:bg-[#10b981]/10 transition-all">View Paper</a>
+                    <a href="https://shorturl.at/u8wv7" target="_blank" class="accent-color border border-[#38bdf8] px-4 py-2 rounded text-[10px] uppercase font-bold hover:bg-[#38bdf8]/10 transition-all">View Paper</a>
                 </div>
             </div>
         </section>
     </main>
-
-    <footer class="text-center py-20 font-mono text-[10px] text-[#475569] border-t border-[#1e293b]">
+ 
+    <footer class="text-center py-20 font-mono text-[10px] text-[#5f7099] border-t border-[#22335e]">
         <p>Built by Godswill Ndukachukwu Douglas | 2026</p>
-        <p class="mt-2 tracking-widest uppercase">Data Analyst & Power BI Developer</p>
+        <p class="mt-2 tracking-widest uppercase">Data Analyst | Power BI &amp; SQL</p>
     </footer>
-
+ 
 </body>
 </html>
